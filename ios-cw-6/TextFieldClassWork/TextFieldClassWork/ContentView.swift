@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     //Add your variables here ضيفوا المتغيرات اهني
-    
+    @State var username = ""
     
     var body: some View {
         VStack(spacing:40){
             //Change the username to the new variable .. غيروا كلمة username الى المتغير الجديد
-            Text("Welcome Back username!")
+            Text("Welcome back\(username)")
                 .font(.system(.title, design: .rounded))
                 .fontWeight(.medium)
                 .foregroundColor(Color(red: 0.167, green: 0.152, blue: 0.229))
@@ -23,7 +23,7 @@ struct ContentView: View {
                 .scaledToFit()
             //Add your TextField Here ضيفوه تحت هالسطر
             //.textFieldStyle(.roundedBorder) < عشان تعدلون على شكله تقدرون تضيفون
-            
+           TextField("tipe your username",text:$username)
             
         }.padding()
     }
